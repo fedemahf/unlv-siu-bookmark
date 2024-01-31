@@ -15,9 +15,6 @@ Acceder a la pestaña "Consola" y pegar el siguiente código el cual imprimirá 
 ```JS
 const getHtmlDocument = async () => {
   const response = await fetch("https://www.unlvirtual.edu.ar:443/campusvirtual/JSPs/home/guarani.jsp?url=https://servicios.unl.edu.ar/fich_cemed&compartida=false&id_perfil=8");
-  if (response.status !== 302) {
-    throw `Error ${response.status} - asegúrate de haber iniciado sesión en el campus virtual`;
-  }
   return await response.text();
 }
 
